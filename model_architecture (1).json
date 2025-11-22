@@ -1,0 +1,20 @@
+{
+  "model_type": "FederatedCNN",
+  "num_classes": 11,
+  "feature_layers": [
+    "Conv2d(1,32,3,1,1)",
+    "ReLU",
+    "MaxPool2d(2)",
+    "Conv2d(32,64,3,1,1)",
+    "ReLU",
+    "MaxPool2d(2)",
+    "Dropout(0.25)"
+  ],
+  "classifier_layers": [
+    "Flatten",
+    "Linear(3136,128)",
+    "ReLU",
+    "Dropout(0.5)",
+    "Linear(128,11)"
+  ]
+}
